@@ -22,6 +22,6 @@ func main() {
 	
 	//字符类型是可以进行运算的，相当于一个整数，运算时按照码值运行
 	var n1 = 10 + 'a'    //10 + 97 
-	fmt.Println("n1=", n1)
-	fmt.Printf("n1=%c", n1) //k
+	fmt.Println("n1=", n1)   //107
+	fmt.Printf("n1=%c\n", n1) //k
 }
