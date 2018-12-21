@@ -21,5 +21,17 @@ func main() {
 	for index, val := range str1 {
 		fmt.Printf("index = %v, val = %c\n", index, val)
 	}
+
+	//打印99乘法表
+	for i := 1; i <= 9; i++ {
+
+		for j := 1; j <= i; j++ {
+			fmt.Print(j, " * ", i, " = ", i * j, " ")
+		}
+		fmt.Println()
+	}
+
+
+
 }
 
