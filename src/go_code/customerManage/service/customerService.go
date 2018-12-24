@@ -65,11 +65,13 @@ func (this *CustomerService) Delete(id int) bool {
 //完成customerService结构体的Update方法
 func (this *CustomerService) Update(id int, name string, gender string,
 	 age int, phone string, email string) bool {
-	index := this.FindById(id)
-	if index == -1 {
-		return false
-	}
 
+	//1.找到id号对应的索引（切片下标）
+	index := this.FindById(id)
+	if index == -1 {   //-1退出本函数     
+		return false   
+	}
+	//2.根据切片下标修改对应的字段
 	this.customers[index].Name = name
 	this.customers[index].Gender = gender
 	this.customers[index].Age = age

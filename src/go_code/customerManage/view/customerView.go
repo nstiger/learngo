@@ -76,10 +76,10 @@ func (this *customerView) update() {
 	index := this.customerService.FindById(id)
 	
 
-	//需要一个方法，得到id客户的初值
+	//3.需要一个方法，得到id客户的初值，必须通过切片下标（index）访问字段值
 
 	fmt.Printf("姓名[%v]：", customers[index].Name)
-	name := customers[index].Name
+	name := customers[index].Name   //此处很重要，为传入参数赋初值，当用户直接回车时，字段不修改！
 	fmt.Scanln(&name)
 	fmt.Printf("性别[%v]：", customers[index].Gender)
 	gender := customers[index].Gender
@@ -94,7 +94,7 @@ func (this *customerView) update() {
 	email := customers[index].Email
 	fmt.Scanln(&email)
 
-	//调用customerService Update方法
+	//4.调用customerService Update方法
 	if this.customerService.Update(id, name, gender, age, phone, email) {
 		fmt.Println("-----------------修改成功------------------")
 	}
