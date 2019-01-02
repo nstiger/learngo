@@ -15,7 +15,7 @@ import (
 )
 
 func writeData(intChan chan int) {
-	for i:=1; i<=500; i++ {
+	for i:=1; i<=50; i++ {
 		intChan<-i
 		fmt.Printf("write data %v\n", i)
 	}
@@ -28,7 +28,7 @@ func readData(intChan chan int, exitChan chan bool) {
 		if !ok {
 			break
 		}
-		fmt.Printf("read data = %v\n", v)
+		fmt.Printf("从intChan读取read data = %v\n", v)
 	}
 
 	//读取数据结束后，写入exitChan,并关闭exitChan
@@ -39,7 +39,7 @@ func readData(intChan chan int, exitChan chan bool) {
 
 func main() {
 
-	intChan := make(chan int, 500)
+	intChan := make(chan int, 10)
 	exitChan := make(chan bool, 1)
 
 	go writeData(intChan)
