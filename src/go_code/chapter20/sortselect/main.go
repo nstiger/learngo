@@ -43,7 +43,6 @@ func SelectSort(arr *[6]int) {
 		// 	arr[0] = Max
 		// }
 		// fmt.Printf("第1次遍历：%v\n", arr)
-
 }
 
 func main() {
