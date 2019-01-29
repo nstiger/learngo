@@ -1,9 +1,11 @@
 package main
 import (
 	"fmt"
+	"math/rand"
+	"time"
 )
 
-func SelectSort(arr *[6]int) {
+func SelectSort(arr *[80000]int) {
 
 	//数组元素个数为j, 遍历j-1次，完成全部的遍历
 	for j := 0; j < len(arr)-1; j++ {
@@ -23,7 +25,7 @@ func SelectSort(arr *[6]int) {
 			arr[MaxIndex] = arr[j]
 			arr[j] = Max
 		}
-		fmt.Printf("第%d次遍历：%v\n", j+1, arr)
+		//fmt.Printf("第%d次遍历：%v\n", j+1, arr)
 	}
 
 		// 	//第一次排序，用数组首元素跟其后元素比较，遍历所有元素，选出最小值
@@ -47,9 +49,17 @@ func SelectSort(arr *[6]int) {
 
 func main() {
 	//var arr [6]int
-	arr := [6]int{10, 8, 14, 23, 95, 101}
+//	arr := [6]int{10, 8, 14, 23, 95, 101}
+//	fmt.Println("main() arr=", arr)
+//测试：选择排序法，8万个随机数据排序
+	var arr [80000]int
+	for i:=0; i < 80000; i++ {
+		arr[i] = rand.Intn(900000)
+	}
 
-	fmt.Println("main() arr=", arr)
-
+	start := time.Now().Unix()
 	SelectSort(&arr)
+	end := time.Now().Unix()
+
+	fmt.Printf("选择排序，8万随机数耗时 %d 秒！！\n", end - start)
 }
