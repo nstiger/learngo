@@ -2,6 +2,7 @@
 
 package main
 import (
+	"time"
 	"fmt"
 )
 
@@ -43,5 +44,7 @@ func main() {
 	fmt.Println("中餐：清水面条")
 	fmt.Println("晚餐：在老北京火锅店就餐，欢送dk")
 	fmt.Println("---------------------------新春佳节圆满顺利-----------------------")
-
+//	time.Now()
+	fmt.Println(time.Now())
+	
 }
