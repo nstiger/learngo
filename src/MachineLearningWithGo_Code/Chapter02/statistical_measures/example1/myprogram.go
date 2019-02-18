@@ -10,6 +10,8 @@ import (
 	"github.com/montanaflynn/stats"
 )
 
+//集中趋势测量法，均值Mean、中位数Median、众数（个数）modeVal
+
 func main() {
 
 	// Open the CSV file.

@@ -6,6 +6,7 @@ import (
 	"github.com/gonum/stat"
 )
 
+//2.3.4.1 测试统计
 func main() {
 
 	// Define observed and expected values. Most

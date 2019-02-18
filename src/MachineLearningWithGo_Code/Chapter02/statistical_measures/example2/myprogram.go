@@ -10,6 +10,8 @@ import (
 	"github.com/kniren/gota/dataframe"
 )
 
+//离中趋势测量法：极大值、极小值、极差、方差、标准差、分位数/四分位数
+
 func main() {
 
 	// Open the CSV file.

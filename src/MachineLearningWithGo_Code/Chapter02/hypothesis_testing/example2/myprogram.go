@@ -7,6 +7,8 @@ import (
 	"github.com/gonum/stat/distuv"
 )
 
+//测试统计 计算p值
+
 func main() {
 
 	// Define the observed frequencies.

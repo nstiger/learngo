@@ -22,6 +22,7 @@ func main() {
 	fmt.Printf("Scaling A by 1.5 gives: %v\n", vectorA)
 
 	// Compute the norm/length of B.
+	//向量的2范数：向量中每个元素的平方和再开方
 	normB := floats.Norm(vectorB, 2)
 	fmt.Printf("The norm/length of B is: %0.2f\n", normB)
 }
