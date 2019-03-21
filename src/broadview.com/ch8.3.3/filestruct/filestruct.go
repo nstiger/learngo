@@ -1,3 +1,6 @@
+/*
+工厂模式输出file1类型
+*/
 package filestruct
 
 type file1 struct {
